@@ -10,7 +10,7 @@ module.exports = function () {
   return function (style) {
     this.on('end', function (err, css) {
       var cssObj = rework(css);
-      cssObj.use(svg(args));
+      cssObj.use(svg(args[0]));
 
       return cssObj.toString();
     });
